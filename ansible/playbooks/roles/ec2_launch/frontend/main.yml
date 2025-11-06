@@ -1,0 +1,17 @@
+#SPDX-LICENSE-IDENTIFIER : MIT-0
+---
+# task file for frontend
+-name: Install frontend dependencies
+beacome: yesnpm: 
+path: /todo-app/todo-frontend
+state: present
+-name: Build frontendbecome: yescommamnd: npm run Build
+args:
+ chdir: todo-app/todo-frontend
+-name:Install PM2 globally
+become: yes
+npm: 
+name:pm2
+global:yes
+
+
