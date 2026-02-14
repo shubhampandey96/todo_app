@@ -1,3 +1,4 @@
+// terraform backend configuration
 terraform {
   backend "s3" {
     bucket = "zaki-terraform-state-bucket"
@@ -6,6 +7,9 @@ terraform {
   }
 }
 
+
+// provider terraform will use in this case, AWS
 provider "aws" {
   region = var.aws_region
+
 }

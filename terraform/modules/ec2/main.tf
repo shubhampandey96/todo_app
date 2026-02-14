@@ -1,3 +1,4 @@
+
 resource "aws_instance" "backend" {
     ami = var.instance_config.ami_id
     instance_type = var.instance_config.instance_type

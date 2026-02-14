@@ -20,4 +20,6 @@ instance_config = {
 alb_config = {
     public_subnet_ids = ["subnet-0a9258c463adf9749", "subnet-024bfbebfa67cb7b3", "subnet-01909f72b0f75df95"]
     certificate_arn = "arn:aws:acm:ap-south-1:688567260640:certificate/d33f7dbb-c39f-4f43-9a34-0e710b3d5d76"
+    
+
 }

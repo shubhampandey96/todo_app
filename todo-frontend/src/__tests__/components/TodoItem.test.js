@@ -14,6 +14,8 @@ describe("Testing the Todo Item component", ()=>{
         expect(screen.getByText("New Todo")).toBeInTheDocument();
 
     })
+    
+
 
     // check if the status of the todo is rendered
     

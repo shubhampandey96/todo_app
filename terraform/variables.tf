@@ -27,6 +27,8 @@ variable "instance_config" {
 
 variable "environment" {
   type = string
+
+  
 }
 
 variable "aws_region" {

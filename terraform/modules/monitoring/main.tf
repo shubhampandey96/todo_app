@@ -99,4 +99,5 @@ resource "aws_iam_role_policy" "prometheus_ec2_discovery" {
 resource "aws_iam_instance_profile" "monitoring_profile" {
   name = "${var.environment}-monitoring-profile"
   role = aws_iam_role.monitoring_role.name
+  
 }

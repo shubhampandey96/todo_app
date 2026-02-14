@@ -24,6 +24,7 @@ module "iam" {
   aws_region = var.aws_region
   aws_account_id = module.ecr.aws_account_id
 }
+
 module "ecr" {
   source = "./modules/ecr"
   environment = var.environment
@@ -45,9 +46,11 @@ module "ec2" {
   }
   monitoring_security_group_id = module.monitoring.monitoring_security_group_id
 }
+
 module "alb" {
   source = "./modules/alb"
   environment = var.environment
+
 
   alb_config = {
     vpc_id = var.instance_config.vpc_id
@@ -63,12 +66,14 @@ module "monitoring" {
     ami_id = var.instance_config.ami_id
     instance_type = var.instance_config.instance_type
     vpc_id = var.instance_config.vpc_id
-    instance_count = 1
+
+    instance_count = 1instance_count
     subnet_ids = var.instance_config.subnet_ids
     instance_profile_name =  module.iam.instance_profile_name
     alb_security_group_id = module.alb.alb_security_group_id
     target_group_arn = module.alb.target_group_arn
     ssh_key_name = var.instance_config.ssh_key_name
+    
   }
 
 }

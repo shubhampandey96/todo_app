@@ -43,6 +43,7 @@ resource "aws_cloudfront_distribution" "website" {
     max_ttl                = 86400
     compress = true
   }
+
     restrictions {
       geo_restriction {
       restriction_type = "none"
